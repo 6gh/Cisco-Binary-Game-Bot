@@ -130,7 +130,7 @@ async fn main() -> WebDriverResult<()> {
                     let binding = bit.inner_html().await?;
                     let bit_text = html_tag_re.replace_all(&binding, "");
 
-                    println!("bit: {}", bit_text);
+                    // println!("bit: {}", bit_text);
 
                     if bit.attr("disabled").await? != None {
                         continue;
